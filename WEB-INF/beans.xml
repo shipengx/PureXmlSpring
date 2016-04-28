@@ -8,15 +8,19 @@
 			<props>
 				<prop key="/welcome">welcomeController</prop>
 				<prop key="/helloGuest">helloGuestController</prop>
+				<prop key="/home">homePageController</prop>
 			</props>
 		</property>
 	</bean>
 	
+	<bean id="homePageController" 
+		class="com.shipeng.controllers.HomePageController" />
+	
 	<bean id="welcomeController" 
-		class="com.shipeng.controller.WelcomeController" />
+		class="com.shipeng.controllers.WelcomeController" />
 		
 	<bean id="helloGuestController" 
-		class="com.shipeng.controller.HelloGuestController" />
+		class="com.shipeng.controllers.HelloGuestController" />
 	
 	<bean id="viewResolver"
     	class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
