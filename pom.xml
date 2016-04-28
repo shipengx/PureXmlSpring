@@ -89,10 +89,18 @@
               <configuration>
                   <webXml>WEB-INF/web.xml</webXml> 
                   <outputDirectory>dist</outputDirectory>
+                  <webResources>
+                      <resource>
+                          <!-- this is relative to the pom.xml directory -->
+                          <directory>WEB-INF</directory>
+                          <!-- target path after copied. -->
+                          <targetPath>WEB-INF</targetPath>
+                      </resource>
+                  </webResources>
               </configuration>
           </plugin>
       </plugins>
+      <finalName>PureXmlSpring</finalName>
   </build>
 
-  
 </project>
