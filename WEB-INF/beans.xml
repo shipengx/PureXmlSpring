@@ -9,6 +9,13 @@
 				<prop key="/welcome">welcomeController</prop>
 				<prop key="/helloGuest">helloGuestController</prop>
 				<prop key="/home">homePageController</prop>
+				<prop key="/listEntry">listEntryController</prop>
+				<!--  
+				<prop key="/newEntry">newEntryController</prop>
+				<prop key="/saveEntry">saveEntryController</prop>
+				<prop key="/deleteEntry">deleteEntryController</prop>
+				<prop key="/editEntry">editEntryController</prop>
+				-->
 			</props>
 		</property>
 	</bean>
@@ -21,6 +28,13 @@
 		
 	<bean id="helloGuestController" 
 		class="com.shipeng.controllers.HelloGuestController" />
+
+    <!-- for blog -->
+	<bean id="listEntryController" 
+		class="com.shipeng.controllers.ListEntryController">
+		<property name="entryDaoImpl" ref="entryDaoImpl" /> 
+	</bean>
+    
 	
 	<bean id="viewResolver"
     	class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
