@@ -26,15 +26,7 @@ public class ListEntryController implements Controller {
 		// TODO Auto-generated method stub
 		
         ModelAndView model = new ModelAndView("home");
-
         List<Entry> listEntry = entryDaoImpl.listEntry();
-        
-        if (listEntry == null) {
-        	System.out.println("empty list.");
-        }else {
-        	System.out.println("count is: " + listEntry.size());
-        }
-       
         model.addObject("listEntry", listEntry);
 
 		return model;
